@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../UART.srcs/sources_1/new/EdgeDetector.v" \
+"../../../../UART.srcs/sources_1/new/ModNCounter.v" \
+"../../../../../ShiftRegister.v" \
+"../../../../UART.srcs/sources_1/new/SlowerClock.v" \
+"../../../../../Tx.v" \
+"../../../../UART.srcs/sources_1/new/TxController.v" \
+"../../../../UART.srcs/sim_1/new/TxTestBench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
