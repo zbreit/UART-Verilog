@@ -2,9 +2,9 @@
 verilog xil_defaultlib  \
 "../../../../UART.srcs/sources_1/new/EdgeDetector.v" \
 "../../../../UART.srcs/sources_1/new/ModNCounter.v" \
-"../../../../../ShiftRegister.v" \
+"../../../../../../../../UMD-Schoolwork/ENEE459V/ShiftRegister.v" \
 "../../../../UART.srcs/sources_1/new/SlowerClock.v" \
-"../../../../../Tx.v" \
+"../../../../../../../../UMD-Schoolwork/ENEE459V/Tx.v" \
 "../../../../UART.srcs/sources_1/new/TxController.v" \
 "../../../../UART.srcs/sim_1/new/TxTestBench.v" \
 

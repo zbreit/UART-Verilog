@@ -20,7 +20,7 @@ wire completedHalfCycle;
 ModNCounter #(.N(INPUT_FREQ / OUTPUT_FREQ / 2), .WIDTH(16)) counter(
     .clk(systemClk),
     .reset(reset),
-    .increment(1),
+    .increment(1'b1),
     .didReachN(completedHalfCycle)
 );
 
