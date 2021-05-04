@@ -70,9 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param synth.incrementalSynthesisCache C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/.Xil/Vivado-14180-DESKTOP-T5F1BVP/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a12ticsg325-1L
 
@@ -91,9 +88,11 @@ read_verilog -library xil_defaultlib {
   C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/EdgeDetector.v
   C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/ModNCounter.v
   C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/RxController.v
-  C:/Users/zbrei/Documents/UMD-Schoolwork/ENEE459V/ShiftRegister.v
   C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/SlowerClock.v
-  C:/Users/zbrei/Documents/UMD-Schoolwork/ENEE459V/Rx.v
+  C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/TxController.v
+  C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/Rx.v
+  C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/ShiftRegister.v
+  C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/Tx.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

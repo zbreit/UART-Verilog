@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue May  4 08:04:40 2021
-# Process ID: 9660
+# Start of session at: Tue May  4 14:34:46 2021
+# Process ID: 14432
 # Current directory: C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.runs/synth_1
 # Command line: vivado.exe -log Rx.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Rx.tcl
 # Log file: C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.runs/synth_1/Rx.vds
@@ -16,23 +16,21 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a12ti'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a12ti'
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13728
+INFO: [Synth 8-7075] Helper process launched with PID 16468
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1004.363 ; gain = 0.000
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1005.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Rx' [C:/Users/zbrei/Documents/UMD-Schoolwork/ENEE459V/Rx.v:10]
+INFO: [Synth 8-6157] synthesizing module 'Rx' [C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/Rx.v:10]
 	Parameter WIDTH bound to: 4'b1000 
 	Parameter NUM_START_BITS bound to: 4'b0001 
 	Parameter NUM_STOP_BITS bound to: 4'b0010 
 	Parameter PARAM_SIZE bound to: 4 - type: integer 
 	Parameter TOTAL_SIZE bound to: 12 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'ShiftRegister' [C:/Users/zbrei/Documents/UMD-Schoolwork/ENEE459V/ShiftRegister.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ShiftRegister' [C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/ShiftRegister.v:9]
 	Parameter WIDTH bound to: 12 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'ShiftRegister' (1#1) [C:/Users/zbrei/Documents/UMD-Schoolwork/ENEE459V/ShiftRegister.v:9]
-WARNING: [Synth 8-7071] port 'Din' of module 'ShiftRegister' is unconnected for instance 'shiftReg' [C:/Users/zbrei/Documents/UMD-Schoolwork/ENEE459V/Rx.v:53]
-WARNING: [Synth 8-7071] port 'load' of module 'ShiftRegister' is unconnected for instance 'shiftReg' [C:/Users/zbrei/Documents/UMD-Schoolwork/ENEE459V/Rx.v:53]
-WARNING: [Synth 8-7071] port 'outputBit' of module 'ShiftRegister' is unconnected for instance 'shiftReg' [C:/Users/zbrei/Documents/UMD-Schoolwork/ENEE459V/Rx.v:53]
-WARNING: [Synth 8-7023] instance 'shiftReg' of module 'ShiftRegister' has 8 connections declared, but only 5 given [C:/Users/zbrei/Documents/UMD-Schoolwork/ENEE459V/Rx.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'ShiftRegister' (1#1) [C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/ShiftRegister.v:9]
+WARNING: [Synth 8-7071] port 'load' of module 'ShiftRegister' is unconnected for instance 'shiftReg' [C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/Rx.v:54]
+WARNING: [Synth 8-7023] instance 'shiftReg' of module 'ShiftRegister' has 8 connections declared, but only 7 given [C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/Rx.v:54]
 INFO: [Synth 8-6157] synthesizing module 'SlowerClock' [C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/SlowerClock.v:7]
 	Parameter INPUT_FREQ bound to: 500000 - type: integer 
 	Parameter OUTPUT_FREQ bound to: 300 - type: integer 
@@ -50,38 +48,42 @@ INFO: [Synth 8-6157] synthesizing module 'RxController' [C:/Users/zbrei/Document
 	Parameter LOADING bound to: 3'b001 
 	Parameter COUNT bound to: 3'b010 
 	Parameter READING bound to: 3'b011 
-	Parameter ERROR bound to: 3'b100 
+	Parameter PARITY_CHECK bound to: 3'b100 
+	Parameter ERROR bound to: 3'b101 
 INFO: [Synth 8-6157] synthesizing module 'EdgeDetector' [C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/EdgeDetector.v:8]
 	Parameter DETECT_POSEDGE bound to: 1'b0 
 INFO: [Synth 8-6155] done synthesizing module 'EdgeDetector' (4#1) [C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/EdgeDetector.v:8]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/RxController.v:51]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/RxController.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'RxController' (5#1) [C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/RxController.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'Rx' (6#1) [C:/Users/zbrei/Documents/UMD-Schoolwork/ENEE459V/Rx.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'Rx' (6#1) [C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/Rx.v:10]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1004.363 ; gain = 0.000
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1005.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1004.363 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1005.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a12ticsg325-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1005.336 ; gain = 0.000
+---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a12ticsg325-1L
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1004.363 ; gain = 0.000
----------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'RxController'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-               LISTENING |                                0 |                              000
-                 LOADING |                                1 |                              001
+               LISTENING |                              000 |                              000
+                 LOADING |                              001 |                              001
+                   COUNT |                              010 |                              010
+                 READING |                              011 |                              011
+            PARITY_CHECK |                              100 |                              100
+                   ERROR |                              101 |                              101
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'RxController'
-WARNING: [Synth 8-327] inferring latch for variable 'increment_reg' [C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/RxController.v:77]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1004.363 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1005.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -101,7 +103,10 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input   12 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 3     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -119,20 +124,20 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1004.363 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1005.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1004.363 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1005.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1004.363 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1005.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -150,37 +155,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1004.363 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1005.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1004.363 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1005.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1004.363 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1005.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1004.363 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1005.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1004.363 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1005.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1004.363 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1005.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -193,41 +198,39 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |BUFG |     1|
-|2     |LUT2 |     1|
-|3     |FDCE |     1|
-|4     |IBUF |     3|
-|5     |OBUF |    10|
-+------+-----+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     4|
+|3     |LUT1   |     2|
+|4     |LUT2   |     3|
+|5     |LUT3   |     4|
+|6     |LUT4   |     5|
+|7     |LUT5   |     4|
+|8     |LUT6   |     8|
+|9     |FDCE   |    23|
+|10    |FDPE   |    12|
+|11    |FDRE   |     1|
+|12    |IBUF   |     4|
+|13    |OBUF   |    10|
++------+-------+------+
 
 Report Instance Areas: 
-+------+--------------+-------------+------+
-|      |Instance      |Module       |Cells |
-+------+--------------+-------------+------+
-|1     |top           |             |    16|
-|2     |  receiverFSM |RxController |     2|
-+------+--------------+-------------+------+
++------+--------------------+----------------------------+------+
+|      |Instance            |Module                      |Cells |
++------+--------------------+----------------------------+------+
+|1     |top                 |                            |    81|
+|2     |  dataCounter       |ModNCounter__parameterized0 |    10|
+|3     |  receiverFSM       |RxController                |    11|
+|4     |    negEdgeDetector |EdgeDetector                |     2|
+|5     |  shiftReg          |ShiftRegister               |    14|
+|6     |  slowClk           |SlowerClock                 |    31|
+|7     |    counter         |ModNCounter                 |    29|
++------+--------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1004.363 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1005.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1004.363 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1004.363 ; gain = 0.000
-INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1004.363 ; gain = 0.000
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1004.363 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-INFO: [Common 17-83] Releasing license: Synthesis
-27 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1004.363 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.runs/synth_1/Rx.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file Rx_utilization_synth.rpt -pb Rx_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue May  4 08:05:05 2021...
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1005.336 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1005.336 ; gain = 0.000

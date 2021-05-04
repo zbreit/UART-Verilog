@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue May  4 12:28:09 2021
+# Process ID: 15704
+# Current directory: C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8820 C:\Users\zbrei\Documents\Coding\UMD\UART-Verilog\UART\UART.xpr
+# Log file: C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/vivado.log
+# Journal file: C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top RxTestBench [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source RxTestBench.tcl
+relaunch_sim
+import_files C:/Users/zbrei/Documents/UMD-Schoolwork/ENEE459V/Rx.v
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_sim
