@@ -1,6 +1,6 @@
-webtalk_init -webtalk_dir C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.sim/sim_1/behav/xsim/xsim.dir/RxTestBench_behav/webtalk/
+webtalk_init -webtalk_dir C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.sim/sim_1/behav/xsim/xsim.dir/UARTTestBench_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Tue May  4 16:32:33 2021" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Tue May  4 16:58:23 2021" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2020.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "3064766" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "418e7159-cb44-45a2-85b1-05736531093a" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "4a430885d51e456f84427c791a23a9a4" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "63" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "48" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Windows Server 2016 or Windows 10" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz" -context "user_environment"
@@ -26,7 +26,7 @@ webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
 webtalk_add_data -client xsim -key runtime -value "350 ms" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "1" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "0.20_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "14544_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 1201335593 -regid "" -xml C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.sim/sim_1/behav/xsim/xsim.dir/RxTestBench_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.sim/sim_1/behav/xsim/xsim.dir/RxTestBench_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.sim/sim_1/behav/xsim/xsim.dir/RxTestBench_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Time -value "0.34_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "14568_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 2028736558 -regid "" -xml C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.sim/sim_1/behav/xsim/xsim.dir/UARTTestBench_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.sim/sim_1/behav/xsim/xsim.dir/UARTTestBench_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.sim/sim_1/behav/xsim/xsim.dir/UARTTestBench_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

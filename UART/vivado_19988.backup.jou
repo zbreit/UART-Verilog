@@ -2,39 +2,31 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sun May  2 18:26:14 2021
-# Process ID: 19836
+# Start of session at: Tue May  4 16:09:48 2021
+# Process ID: 19988
 # Current directory: C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1228 C:\Users\zbrei\Documents\Coding\UMD\UART-Verilog\UART\UART.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11556 C:\Users\zbrei\Documents\Coding\UMD\UART-Verilog\UART\UART.xpr
 # Log file: C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/vivado.log
 # Journal file: C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.xpr
-update_compile_order -fileset sources_1
-close [ open C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/RxController.v w ]
-add_files C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.srcs/sources_1/new/RxController.v
-update_compile_order -fileset sources_1
 launch_simulation
-source TxTestBench.tcl
-close_sim
-launch_simulation
-source TxTestBench.tcl
+source RxTestBench.tcl
+relaunch_sim
+relaunch_sim
 reset_run synth_1
 launch_runs synth_1 -jobs 4
 wait_on_run synth_1
-launch_runs impl_1 -jobs 4
-wait_on_run impl_1
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
 # Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
 set_property source_mgmt_mode None [current_project]
-set_property top Rx [current_fileset]
+set_property top UARTTestBench [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
 # Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
-launch_runs impl_1 -jobs 4
-wait_on_run impl_1
-open_run impl_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
 close_sim

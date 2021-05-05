@@ -51,7 +51,7 @@ wire[TOTAL_SIZE-1:0] transmission = {
 ShiftRegister  #(.WIDTH(WIDTH + 4)) shiftReg (
     .clk(clk),
     .reset(reset),
-    .serialIn(1),
+    .serialIn(1'b1),
     .shift(shift),
     .load(load),
     .Din(transmission),

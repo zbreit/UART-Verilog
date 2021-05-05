@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue May  4 14:34:46 2021
-# Process ID: 14432
+# Start of session at: Wed May  5 14:39:05 2021
+# Process ID: 23236
 # Current directory: C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.runs/synth_1
-# Command line: vivado.exe -log Rx.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Rx.tcl
-# Log file: C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.runs/synth_1/Rx.vds
+# Command line: vivado.exe -log Tx.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Tx.tcl
+# Log file: C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.runs/synth_1/Tx.vds
 # Journal file: C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source Rx.tcl -notrace
+source Tx.tcl -notrace

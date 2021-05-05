@@ -16,6 +16,8 @@ module RxController(
     output reg busy,            // Whether the receiver is currently processing a transmission
     output reg readBit,         // Whether to read another bit from Din
     output reg increment,       // Whether to increment the bit counter
+    output reg publishData,     // Whether to output the data in the shift register
+    output reg receivedNewMsg,  // Whether a new transmission was successfully received
     output reg error            // Whether the transmission data has an error
 );
 
@@ -27,7 +29,8 @@ localparam
     COUNT = 3'b010,
     READING = 3'b011,
     PARITY_CHECK = 3'b100,
-    ERROR = 3'b101;
+    SUCCEEDED = 3'b101,
+    ERROR = 3'b110;
     
 // Setup negative edge detector for the next bit clock/
 // This allows us to sample in the middle of the transmission bit
@@ -48,6 +51,8 @@ always @(*) begin
     readBit = 0;
     error = 0;
     increment = 0;
+    receivedNewMsg = 0;
+    publishData = 0;
     
     // Next state logic
     case(state)
@@ -81,10 +86,18 @@ always @(*) begin
         end
         
         PARITY_CHECK: begin
-            if (parityMatch) nextState = LISTENING;
+            // Go back to the beginning if the parity matches
+            // or to an error state otherwise.
+            if (parityMatch) nextState = SUCCEEDED;
             else nextState = ERROR;
             
             busy = 1;
+            publishData = 1;
+        end
+        
+        SUCCEEDED: begin
+            nextState = LISTENING;
+            receivedNewMsg = 1;
         end
         
         ERROR: begin

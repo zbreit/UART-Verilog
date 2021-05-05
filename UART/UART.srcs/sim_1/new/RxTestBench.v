@@ -14,7 +14,7 @@ module RxTestBench();
     // Module inputs/outputs
     reg reset, useOddParity;
     reg Din;
-    wire busy, error;
+    wire busy, error, receivedNewMsg;
     wire[WIDTH-1:0] Dout;
     
     // Instantiate Module
@@ -25,7 +25,8 @@ module RxTestBench();
         .useOddParity(useOddParity),
         .busy(busy),
         .Dout(Dout),
-        .error(error)
+        .error(error),
+        .receivedNewMsg(receivedNewMsg)
     );
     
     // Test inputs and outputs
@@ -60,7 +61,7 @@ module RxTestBench();
             
             // Assert correct state (wait for a small amount of time
             // before measuring output signals)
-            #(delayPerBit / 2);
+            #(delayPerBit);
             $display("Busy (should = 0):\t %b", busy);
             $display("Error (should = 0):\t %b", error);
             $display("Expected:\t %b", expectedOutput);
