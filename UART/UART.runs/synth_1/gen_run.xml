@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a12ticsg325-1L" LaunchTime="1620239939">
-  <File Type="PA-TCL" Name="Tx.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="Tx_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="Tx_reports.tcl"/>
-  <File Type="RDS-RDS" Name="Tx.vds"/>
-  <File Type="RDS-UTIL" Name="Tx_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="Tx_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="Tx.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Tx_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Tx_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a12ticsg325-1L" LaunchTime="1620241198">
+  <File Type="PA-TCL" Name="Rx.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Rx_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Rx_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Rx.vds"/>
+  <File Type="RDS-UTIL" Name="Rx_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Rx_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Rx.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Rx_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Rx_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/EdgeDetector.v">
@@ -69,7 +69,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Tx"/>
+      <Option Name="TopModule" Val="Rx"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.runs/synth_1/Tx.tcl"
+  variable script "C:/Users/zbrei/Documents/Coding/UMD/UART-Verilog/UART/UART.runs/synth_1/Rx.tcl"
   variable category "vivado_synth"
 }
 
@@ -110,7 +110,7 @@ set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top Tx -part xc7a12ticsg325-1L
+synth_design -top Rx -part xc7a12ticsg325-1L
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -120,10 +120,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef Tx.dcp
+write_checkpoint -force -noxdef Rx.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file Tx_utilization_synth.rpt -pb Tx_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file Rx_utilization_synth.rpt -pb Rx_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

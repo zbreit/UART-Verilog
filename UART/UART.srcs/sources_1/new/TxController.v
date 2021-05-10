@@ -49,10 +49,12 @@ always @(*) begin
     // Next state logic
     case(state)
         IDLE: begin
+            // Wait until the user wants to send data
             if (startSending) nextState = LOADING;
         end
         
         LOADING: begin
+            // Load parallel data into the shift register 
             nextState = COUNT;
             load = 1;
             busy = 1;
@@ -61,11 +63,14 @@ always @(*) begin
         end
         
         COUNT: begin
+            // Wait for the baud rate timer to trigger
             if (nextBitEdge) nextState = SHIFT;
             busy = 1;
         end
         
         SHIFT: begin
+            // Transmit a single bit, adjusting the counter and shift register
+            // accordingly
             nextState = (sentAllData) ? WAIT : COUNT;
             busy = 1;
             shift = 1;
@@ -73,6 +78,8 @@ always @(*) begin
         end
         
         WAIT: begin
+            // Don't transmit another bit until the send signal goes
+            // low
             if (~startSending) nextState = IDLE;
         end
     endcase

@@ -8,7 +8,7 @@
  
 module ShiftRegister
 #(
-    parameter WIDTH = 12   // # of data bits
+    parameter WIDTH = 12            // # of data bits
 )
 (
     input clk,                      // System clock

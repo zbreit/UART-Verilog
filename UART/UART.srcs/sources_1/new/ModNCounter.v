@@ -6,8 +6,8 @@
 
 module ModNCounter
 #(
-  parameter N = 4'd12,     // Counter will go from 0 to N - 1
-  parameter WIDTH = 4      // How many bits are needed to store the count WIDTH >= 2**N
+  parameter N = 4'd12,                      // Counter will go from 0 to N - 1
+  parameter WIDTH = 4                       // How many bits are needed to store the count (WIDTH >= 2**N)
 )
 (
     input clk,                               // Clock

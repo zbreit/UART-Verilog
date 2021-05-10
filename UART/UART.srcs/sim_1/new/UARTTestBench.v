@@ -76,20 +76,20 @@ initial begin
         #10 send = 1;
         #10 send = 0;
         
-        // Wait for full message to transmit (13 bits)
+        // Wait for full message to transmit (12 bits)
         #(delayPerBit * (TOTAL_MSG_SIZE + 1));
         
         // Make sure output is correct
         if (Dout != Din) begin
-            $display("Received %h instead of %h", Dout, Din);
+            $display("ERROR: Received %h instead of %h", Dout, Din);
             $stop;
         end
         else begin
-            $display("Correctly received %h", Dout);
+            $display("SUCCESS: Correctly received '%h'", Dout);
         end
     end
     
-    $display("Successfully received the message!");
+    $display("\nSUCCESS: Received the message 'deadbeef1337' :)");
 end
 
 endmodule

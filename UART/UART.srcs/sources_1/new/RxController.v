@@ -62,6 +62,7 @@ always @(*) begin
         end
         
         LOADING: begin
+            // Reset all relevant circuitry
             nextState = COUNT;
             resetTimer = 1;
             resetCounter = 1;
@@ -96,6 +97,7 @@ always @(*) begin
         end
         
         SUCCEEDED: begin
+            // Pulse the receivedNewMsg output for any external circuitry
             nextState = LISTENING;
             receivedNewMsg = 1;
         end
